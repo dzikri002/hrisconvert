@@ -1,0 +1,132 @@
+/* CSS Document */
+
+#table_calendar {
+border: 0px solid #c0c0c0;
+}
+#calendar_av {
+width: 15px;
+background-color: green;
+color: white;
+font-weight: bold;
+padding: 0px;
+margin: 0px; 
+}
+
+#calendar_not_av {
+width: 15px;
+background-color: #c0c0c0;
+color: white;
+font-weight: bold;
+padding: 0px;
+margin: 0px; 
+}
+#calendar {
+width: 15px;
+border: 0px solid #c0c0c0;
+}
+#listitem {
+padding: 5px 0 5px 20px;
+align: left;
+}
+#main{
+width: 900px;
+border: 2px solid #c0c0c0;
+background-color: #c0c0c0;
+
+
+}
+body {
+background-color: #FFFBF0;
+padding: 10px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+}
+h1 {
+
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #175c6b;
+}
+#menu a {
+color: black;
+text-decoration: none;
+}
+#menu li {
+margin: 5px 0 0 -10px;
+}
+a {
+text-decoration: none;
+color: #175c6b;
+}
+tr {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+}
+h1 {
+color: #eb8137;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 16px;
+}
+#cell_top {
+background-color: white;
+border-bottom: 3px solid #eb8137;
+padding: 3px;
+}
+#cell_mid {
+background-color: #eb8137;
+padding: 5px;
+color: white;
+height: 20px;
+vertical-align:middle;
+}
+
+#menu {
+width: 150px;
+height: 400px;
+background-color: white;
+border-right: 2px solid #eb8137;
+vertical-align: top;
+padding: 10px;
+}
+#cell_mid a {
+color: white;
+text-decoration: none;
+}
+#content {
+width: 850px;
+background-color: white;
+vertical-align: top;
+padding: 10px;
+}
+#content a {
+text-decoration: none;
+color: #0066ff;
+}
+#sponsored {
+width: 150px;
+height: 100px;
+background-color: white;
+border-right: 2px solid #eb8137;
+vertical-align: top;
+padding: 10px;
+}
+#sponsored a {
+text-decoration: none;
+color: #0066ff;
+}
+input {
+border: 1px solid #c0c0c0;
+}
+#notice {
+padding: 10px;
+margin: 10px;
+border: 1px dotted #eb8137;
+background-color: #FFFBF0;
+}
+.notice {
+padding: 10px;
+margin: 15px;
+border: 1px dotted #eb8137;
+background-color: #FFFBF0;
+}
+

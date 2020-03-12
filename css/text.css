@@ -1,0 +1,39 @@
+/* normal Links */
+A:link {text-decoration:underline; color:#A71C10;}
+A:active {text-decoration:underline; color:#222222;}
+A:visited {text-decoration:underline; color:#222222;}
+A:hover {text-decoration:underline; color:#222222;}
+
+/* Link in "oben" */
+a.w:link {text-decoration:underline; color:#AdB7D1;}
+a.w:active {text-decoration:underline; color:#FFFFFF;}
+a.w:visited {text-decoration:underline; color:#FFFFFF;}
+a.w:hover {text-decoration:underline; color:#FFFFFF;}
+
+.KEMRI_SCD {
+	color: inherit; /* text color */
+	font-family: Verdana; /* font name */
+	font-size: x-small; /* font size */	
+}
+
+.msg {font-family:Verdana,Arial; font-size:8pt; color:#A71C10; font-weight: normal;}
+
+/* Bordercolors */
+.bordercolor  { background-color: #6394BD; width:600px; border-right:2px solid #DEE7EF;border-bottom:2px solid #DEE7EF;}
+.bordercolor2  { background-color: #6394BD; width:100%; border-right:2px solid #DEE7EF;border-bottom:2px solid #DEE7EF;}
+.bordercolor3  { background-color: #6394BD; border-right:2px solid #DEE7EF;border-bottom:2px solid #DEE7EF;}
+
+/* Tablre foramt */
+td.header {background-color:#6394BD; font-family:Tahoma,Verdana,Arial; font-size:14pt; color:#FFFFFF; font-weight: bold; text-align:center;}
+td.oben {background-color:#6394BD; font-family:Verdana,Arial; font-size:8pt; color:#FFFFFF; font-weight: bold; background-image:url("oben.jpg");}
+td.w {background-color:#FFFFFF; font-family:Verdana,Arial; font-size:8pt; color:#222222; font-weight: normal;}
+td.g {background-color:#DEE7EF; font-family:Verdana,Arial; font-size:8pt; color:#222222; font-weight: normal;}
+td.gb {background-color:#DEE7EF; font-family:Verdana,Arial; font-size:8pt; color:#222222; font-weight: bold;}
+td.wb {background-color:#FFFFFF; font-family:Verdana,Arial; font-size:8pt; color:#222222; font-weight: bold;}
+
+/* Format Buttons */
+.txt {font-size:8pt; font-family:Verdana,Arial;}
+.btn {font-size:8pt; font-family:Verdana,Arial;}
+
+/* body background */
+body {background-color:#FFFFFF;}
