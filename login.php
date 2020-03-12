@@ -1,202 +1,60 @@
-<? 
-session_start();
-/*
-   * e-hris (Electonic-Human Resource Information System v 1.2.0) Is an open source human resource information management system
-   * developed to automate all aspects of human resource management, with the dual benefits of reducing the workload of the HR department as well as increasing the efficiency of the department by standardising
-   * HR processes for any organization from small-enterprises to large scale organizations.
-   * Copyright (C) 2008  David Muturi
+<!DOCTYPE html>
+<html lang="en">
 
-   * This program is free software: you can redistribute it and/or modify
-   * it under the terms of the GNU General Public License as published by
-   * the Free Software Foundation, either version 3 of the License, or
-   * (at your option) any later version.
-
-   * This program is distributed in the hope that it will be useful,
-   * but WITHOUT ANY WARRANTY; without even the implied warranty of
-   * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   * GNU General Public License for more details.
-
-   * You should have received a copy of the GNU General Public License
-   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-ob_start();
-?>
-<?
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); // Date in the past
-header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); // Always modified
-header("Cache-Control: private, no-store, no-cache, must-revalidate"); // HTTP/1.1 
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache"); // HTTP/1.0
-?>
-<?  include "includes/functions.php";
-  include "includes/config.php";
-  require_once "includes/db.php";
-   ?>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>E-HRIS</title>
-<link href="css/text.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HRIS">
+  <meta name="author" content="ais-soft">
+  <meta name="keyword" content="">
+  <link rel="shortcut icon" href="img/favicon.png">
 
-<style>
-.black_overlay{
+  <title>Login HRIS</title>
+  <link href="bootstrap/css/bootstrap3.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/jquery.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
 
-            display: none;
+<body>
 
-            position: absolute;
+  <div class="container">
 
-           top: 0%;
+  <div class="col-md-12">
+    <div class="modal-dialog" style="margin-bottom:0">
+        <div class="modal-content">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">HRIS Application</h3>
+                        <p>
+                            
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <a href="javascript:;" class="btn btn-sm btn-success">Login</a>
+                            </fieldset>
+                        </form>
+                        <p>
+                            
+                    </div>
+                </div>
+    </div>
+</div>
+</div>
 
-            left: 0%;
-
-            width: 100%;
-
-            height: 100%;
-
-            background-color: black;
-
-            z-index:1001;
-
-            -moz-opacity: 0.8;
-
-            opacity:.80;
-
-            filter: alpha(opacity=80);
-
-        }
-
-        .white_content {
-
-            display: none;
-
-            position: absolute;
-
-            top: 25%;
-
-            left: 25%;
-
-           width: 50%;
-
-            height: 50%;
-
-            padding: 16px;
-
-            border: 16px solid orange;
-
-            background-color: white;
-
-            z-index:1002;
-
-            overflow: auto;
-
-        }
-
-    </style>
-    <script type="text/javascript" src="ewp.js"></script>
-		<script type="text/javascript">
-		<!--
-		function EW_checkMyForm(EW_this) {
-			if (!EW_hasValue(EW_this.username, "TEXT" )) {
-				if  (!EW_onError(EW_this, EW_this.username, "TEXT", "Please enter user ID"))
-					return false;
-			}
-			if (!EW_hasValue(EW_this.password, "PASSWORD" )) {
-				if (!EW_onError(EW_this, EW_this.password, "PASSWORD", "Please enter password"))
-					return false;
-			}
-			return true;
-		}
-		
-		//-->
-		</script>
-    </head>
-
-    <body onLoad="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-
-      
-        <div id="light" class="white_content"> 
-		<div>
-		
-		</div>
-		<span class="KEMRI_SCD">E-HRIS</span>
-		<span class="msg">
-		Is an open source human resource information management system developed to automate all aspects of human resource management, with the dual benefits of reducing the workload of the HR department as well as increasing the efficiency of the department by standardising HR processes
-		for any organization from small-enterprises to large scale organizations. </span>
-       
-		<br><br><div class="msg">username=demo Password=demo</div><br> 
-		<div align="left"><img src="images/hasphoto.gif"></div>
-		 <div class="txt" align="center">
-<form action="login.php" method="post" name="loginfrm">
-		 Username:<input type="text" name="username"><br><br>
-		    &nbsp;Password:<input name="password" type="password"><br><br></div>
-			<div align="center" class="btn"><input name="Login" type="submit" value="Login">
-			
-		</form></div>
-		<span class="KEMRI_SCD">(c) 2009 - * ehris 1.2.0 * <a href="mailto:dnmuturi@gmail.com">David M</a>
-          This program is released under the GNU General Public License.</span>
-		</div>
-        
-        <div id="fade" class="black_overlay"></div>
-
-  <?
- if (!empty($_POST["username"]))
-    $username=$_POST["username"];
-  else
-    $username="";
-	  
-  if (!empty($_POST["password"]))
-    $upasswd=$_POST["password"];
-  else
-    $upasswd="";
-	
-  if (!empty($_POST["dbname"]))
-    $dbname=$_POST["dbname"]; 
-  else
-    $dbname=$db;
-	
-  //get hostip from db
-  /*mysql_connect($db_host, $db_user, $db_pass) or die(mysql_error()); 
-  mysql_select_db($setupdb) or die(mysql_error());
-  $sqlstr="select hostip from  fsdb where dbname like '$dbname'";
-  $result=mysql_query($sqlstr);
-  $row=mysql_fetch_object($result);
-  
-  if (!empty($row->hostip)) 
-    $db_host=$row->hostip;
-  
-  mysql_close();*/
-  
-  
-  //if (!$link)  
-  $link=mysql_connect($db_host,$db_user,$db_pass);
-  
-  if (!empty($username) && !empty($upasswd))
-  {
-    //connect to db
-	
-	mysql_select_db($dbname);
-	
-    $sqlstr = "select * from hrusers where username like '$username' and password like '". md5($upasswd)."'";
-	$sqlresult = mysql_query($sqlstr) or die(mysql_error());
-	$numrows = mysql_num_rows($sqlresult);
-	
-	if ($numrows>0)
-	{
-	   $_SESSION["username"] = $username; 
-	   $_SESSION["upass"] = $upasswd;
-	   print "<center><font face=verdana color=#003366 size=2 >Successfully Logged in</font></center>";
-       echo "<meta http-equiv='refresh' content='1;url=viewemployees.php'>";
-	}
-	else
-	{
-	  echo "<div align=\"center\"><font face=verdana color=red>Wrong Password or Username!!</font></div>";
-	}
-    
-  }
-  mysql_close();
-?>
 
 </body>
+
 </html>
